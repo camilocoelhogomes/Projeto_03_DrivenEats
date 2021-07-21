@@ -46,6 +46,7 @@ h2 {
 .menu-iten{
     height: 216px;
     width: 172px;
+    min-width: 172px;
     background-color: red;
     margin-right: 4vw;
 }
