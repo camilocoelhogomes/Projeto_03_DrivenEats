@@ -81,6 +81,25 @@ h2 {
     color: #000;
     font-weight: normal;
 }
+.menu-iten-selector-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin: 0;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: none;
+    transition: 0.2s all linear;
+    position: relative;
+}
+.menu-iten-selector-input:checked{
+    background-color: #32B72F;
+
+}
+
 .bottom{
     height: 92px;
     width: 100%;

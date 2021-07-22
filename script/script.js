@@ -14,21 +14,28 @@ const order = {
 let closedOrder = false;
 
 function updateFood(e){
-    order.food = [e.target.id,e.target.value];
+    order.food = [e.target.id,Number(e.target.value)];
     if(Object.values(order).filter(i => i.length===2).length === 3){
         closedOrder = true
     }
 }
 function updateDrink(e){
-    order.drink = [e.target.id,e.target.value];
+    order.drink = [e.target.id,Number(e.target.value)];
     if(Object.values(order).filter(i => i.length===2).length === 3){
         closedOrder = true
     }
 }
 function updateDessert(e){
-    order.dessert = [e.target.id,e.target.value];
+    order.dessert = [e.target.id,Number(e.target.value)];
     if(Object.values(order).filter(i => i.length===2).length === 3){
         closedOrder = true
+    }
+}
+
+function sendOrder (){
+    let total = 0;
+    if(closedOrder){
+        total = order.food[1]+order.drink[1]+order.dessert[1]
     }
 }
 
