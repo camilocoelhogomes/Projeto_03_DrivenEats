@@ -95,8 +95,8 @@ h2 {
     transition: 0.2s all linear;
     position: relative;
 }
-.menu-iten-selector-input:checked{
-    background-color: #32B72F;
+:checked {
+    background-color:  #32B72F;
 
 }
 

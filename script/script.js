@@ -31,11 +31,17 @@ function updateDessert(e){
         closedOrder = true
     }
 }
-
 function sendOrder (){
     let total = 0;
     if(closedOrder){
         total = order.food[1]+order.drink[1]+order.dessert[1]
+        alert(
+            `Olá, gostaria de fazer o pedido:\n
+            - Prato: ${order.food[0]}\n
+            - Bebida: ${order.drink[0]}\n
+            - Sobremesa: ${order.dessert[0]}\n
+            Total: R$ ${Number(total).toFixed(2)}
+        `)
     }
 }
 
