@@ -77,7 +77,10 @@ h2 {
     font-weight: bold;
     height: max-content;
 }
-
+.menu-iten-price{
+    color: #000;
+    font-weight: normal;
+}
 .bottom{
     height: 92px;
     width: 100%;
