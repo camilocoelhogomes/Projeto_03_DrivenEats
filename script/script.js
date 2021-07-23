@@ -15,14 +15,20 @@ let mensage = '';
 
 function updateFood(e){
     order.food = [e.target.id,Number(e.target.value)];
+    removeOlderBorder(e);
+    addSelectedBorder(e);
     creatMensage();
 }
 function updateDrink(e){
     order.drink = [e.target.id,Number(e.target.value)];
+    removeOlderBorder(e);
+    addSelectedBorder(e);
     creatMensage();
 }
 function updateDessert(e){
     order.dessert = [e.target.id,Number(e.target.value)];
+    removeOlderBorder(e);
+    addSelectedBorder(e);
     creatMensage();
 }
 function creatMensage(){
@@ -39,6 +45,17 @@ function creatMensage(){
         `
         document.querySelector('a').href = `https://wa.me/5531973158478?text=${encodeURIComponent(mensage)}`
     }
+}
+function removeOlderBorder (e){
+    let olderSelected = document.querySelector('.green-border');
+    console.log(olderSelected);
+    if (olderSelected){
+        olderSelected = olderSelected.classList.remove('green-border');
+    }
+}
+function addSelectedBorder (e){
+    let selected = document.querySelector(`.${e.target.id}`);
+    selected.classList.add('green-border');
 }
 function sendOrder (){
 
