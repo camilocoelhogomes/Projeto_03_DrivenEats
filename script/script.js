@@ -25,9 +25,10 @@ function updateDessert(e){
     order.dessert = [e.target.id,Number(e.target.value)];
     creatMensage();
 }
+
 function creatMensage(){
     if(!isNaN(order.food[1]) && !isNaN(order.dessert[1]) && !isNaN(order.drink[1])){
-        document.querySelector('button').classList.remove('hided');
+        document.querySelector('a').classList.remove('hided');
         document.querySelector('.button-close-order-disabled').classList.add('hided');
         const total = order.food[1]+order.drink[1]+order.dessert[1]
         mensage = 
@@ -39,8 +40,5 @@ function creatMensage(){
         `
         document.querySelector('a').href = `https://wa.me/5531973158478?text=${encodeURIComponent(mensage)}`
     }
+    else {}
 }
-function sendOrder (){
-
-}
-
