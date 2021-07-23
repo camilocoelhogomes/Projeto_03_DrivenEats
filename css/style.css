@@ -8,6 +8,16 @@ h2 {
     font-family: 'Righteous', cursive;
 
 }
+ion-icon{
+    color: #fff;
+    z-index: 1;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position:relative;
+}
 .main-container{
     width: 100%;
 }
@@ -23,6 +33,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 .main-title{
     font-size: 44px;
@@ -97,7 +108,6 @@ h2 {
 }
 :checked {
     background-color:  #32B72F;
-
 }
 
 .bottom{
@@ -111,9 +121,10 @@ h2 {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 
-.button-close-order{
+.button-close-order-disabled{
     width: 88%;
     height: 61px;
     border-radius: 50px;
@@ -122,4 +133,25 @@ h2 {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-close-order{
+    width: 88%;
+    height: 61px;
+    border-radius: 50px;
+    background-color: #32B72F;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hided{
+    display: none;
 }

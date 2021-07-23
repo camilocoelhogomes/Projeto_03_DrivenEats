@@ -11,37 +11,36 @@ const order = {
     drink: [],
     dessert: [],
 }
-let closedOrder = false;
+let mensage = '';
 
 function updateFood(e){
     order.food = [e.target.id,Number(e.target.value)];
-    if(Object.values(order).filter(i => i.length===2).length === 3){
-        closedOrder = true
-    }
+    creatMensage();
 }
 function updateDrink(e){
     order.drink = [e.target.id,Number(e.target.value)];
-    if(Object.values(order).filter(i => i.length===2).length === 3){
-        closedOrder = true
-    }
+    creatMensage();
 }
 function updateDessert(e){
     order.dessert = [e.target.id,Number(e.target.value)];
-    if(Object.values(order).filter(i => i.length===2).length === 3){
-        closedOrder = true
-    }
+    creatMensage();
 }
-function sendOrder (){
-    let total = 0;
-    if(closedOrder){
-        total = order.food[1]+order.drink[1]+order.dessert[1]
-        alert(
+function creatMensage(){
+    if(!isNaN(order.food[1]) && !isNaN(order.dessert[1]) && !isNaN(order.drink[1])){
+        document.querySelector('button').classList.remove('hided');
+        document.querySelector('.button-close-order-disabled').classList.add('hided');
+        const total = order.food[1]+order.drink[1]+order.dessert[1]
+        mensage = 
             `Olá, gostaria de fazer o pedido:\n
             - Prato: ${order.food[0]}\n
             - Bebida: ${order.drink[0]}\n
             - Sobremesa: ${order.dessert[0]}\n
             Total: R$ ${Number(total).toFixed(2)}
-        `)
+        `
+        document.querySelector('a').href = `https://wa.me/5531973158478?text=${encodeURIComponent(mensage)}`
     }
+}
+function sendOrder (){
+
 }
 
