@@ -50,7 +50,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="Pizza"
-                                value=30.00>
+                                value=60.00>
                         </div>
                     </div>
                 </label>
@@ -64,7 +64,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="Churrasquinho"
-                                value=30.00>
+                                value=5.99>
                         </div>
                     </div>
                 </label>
@@ -78,7 +78,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="Fettuccine"
-                                value=30.00>
+                                value=49.99>
                         </div>
                     </div>
                 </label>
@@ -109,7 +109,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="drink" id="Coca-Cola"
-                                value=30.00>
+                                value=4.99>
                         </div>
                     </div>
                 </label>
@@ -123,7 +123,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="drink"
-                                id="Guarana-Jesus" value=30.00>
+                                id="Guarana-Jesus" value=3.99>
                         </div>
                     </div>
                 </label>
@@ -137,7 +137,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="drink" id="Pinga"
-                                value=30.00>
+                                value=1>
                         </div>
                     </div>
                 </label>
@@ -151,7 +151,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="drink" id="Suco"
-                                value=30.00>
+                                value=50.00>
                         </div>
                     </div>
                 </label>
@@ -169,7 +169,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="Musse"
-                                value=30.00>
+                                value=4.99>
                         </div>
                     </div>
                 </label>
@@ -183,7 +183,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="doce-de-coco"
-                                value=30.00>
+                                value=3.99>
                         </div>
                     </div>
                 </label>
@@ -197,7 +197,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="torta"
-                                value=30.00>
+                                value=1>
                         </div>
                     </div>
                 </label>
@@ -211,7 +211,7 @@
                         <div class='relative'>
                             <ion-icon class="absolute" name="checkmark-outline"></ion-icon>
                             <input class="menu-iten-selector-input absolute" type="radio" name="food" id="pudin"
-                                value=30.00>
+                                value=50.00>
                         </div>
                     </div>
                 </label>
@@ -219,11 +219,9 @@
 
         </div>
         <div class="bottom">
-            <a class='hided' href="#">
-                <button onclick="sendOrder();" class="button-close-order">
-                    <p>Fechar pedido</p>
-                </button>
-            </a>
+            <button onclick="confirmOrder();" class="button-close-order hided">
+                <p>Fechar pedido</p>
+            </button>
             <div class="button-close-order-disabled">
                 <p>Selecione os 3 itens</p>
                 <p>para fechar o pedido</p>
@@ -231,7 +229,7 @@
         </div>
     </div>
 
-    <div class="order-confirm-background">
+    <div class="order-confirm-background hided">
         <div class="order-confirm">
             <p class="order-confirm-title">Confirme seu pedido</p>
             <div class="order"></div>
@@ -239,17 +237,25 @@
                 <p class="description food"></p>
                 <p class='price food'></p>
             </div>
-            <div class="order-line drink">
-                <p></p>
-                <p></p>
+            <div class="order-line">
+                <p class='description drink'></p>
+                <p class='price drink'></p>
             </div>
-            <div class="order-line dessert">
-                <p></p>
-                <p></p>
+            <div class="order-line">
+                <p class="description dessert"></p>
+                <p class='price dessert'></p>
             </div>
-            <div class="order-line total">
-                <p>TOTAL</p>
-                <p></p>
+            <div class="order-line">
+                <p class="descripton total">TOTAL</p>
+                <p class='price total'></p>
+            </div>
+            <a href='#' class="send-order-link">
+                <div class="send-order">
+                    Tudo certo, pode pedir!
+                </div>
+            </a>
+            <div onclick="cancelOrder();" class="cancel-order">
+                <p>Cancelar</p>
             </div>
         </div>
     </div>
