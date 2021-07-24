@@ -48,7 +48,6 @@ function creatMensage(){
 }
 function removeOlderBorder (e){
     let olderSelected = document.querySelector('.green-border');
-    console.log(olderSelected);
     if (olderSelected){
         olderSelected = olderSelected.classList.remove('green-border');
     }
@@ -57,7 +56,3 @@ function addSelectedBorder (e){
     let selected = document.querySelector(`.${e.target.id}`);
     selected.classList.add('green-border');
 }
-function sendOrder (){
-
-}
-
