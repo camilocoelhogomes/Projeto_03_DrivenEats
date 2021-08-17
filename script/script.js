@@ -83,5 +83,5 @@ function creatMensage() {
             Nome: ${person}\n
             Endereço: ${address}
         `
-    document.querySelector('a.send-order-link').href = `https://wa.me/5531973158478?text=${encodeURIComponent(mensage)}`
+    document.querySelector('a.send-order-link').href = `https://wa.me/5531982418649?text=${encodeURIComponent(mensage)}`
 }
